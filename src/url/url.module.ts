@@ -1,12 +1,13 @@
 // src/url/url.module.ts
 
-import { Module } from '@nestjs/common';
+import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UrlController } from './url.controller';
 import { UrlService } from './url.service';
 import { Url } from './url.entity';
 import { UrlCleanupService } from './url.cleanup.service';
 import { ScheduleModule } from '@nestjs/schedule';
+import { LoggingMiddleware } from './logging.middleware';
 
 @Module({
   imports: [
@@ -16,4 +17,8 @@ import { ScheduleModule } from '@nestjs/schedule';
   controllers: [UrlController],
   providers: [UrlService, UrlCleanupService],
 })
-export class UrlModule {}
+export class UrlModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(LoggingMiddleware).forRoutes('*'); // Apply logging middleware to all routes
+  }
+}

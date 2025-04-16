@@ -25,4 +25,12 @@ export class UrlController {
   async getOriginalUrl(@Param('shortUrl') shortUrl: string): Promise<Url> {
     return this.urlService.getOriginalUrl(shortUrl);
   }
+
+  // GET request to retrieve analytics for a specific short URL
+  @Get(':shortUrl/analytics')
+  async getUrlAnalytics(
+    @Param('shortUrl') shortUrl: string,
+  ): Promise<{ accessCount: number }> {
+    return this.urlService.getUrlAnalytics(shortUrl);
+  }
 }
