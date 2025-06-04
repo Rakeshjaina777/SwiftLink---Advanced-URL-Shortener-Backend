@@ -162,13 +162,4 @@ This project showcases my ability to:
 
 ---
 
-## 🤝 Let's Connect
 
-If you're looking for a backend developer who can build production-grade, high-scale systems —  
-feel free to connect with me!
-
-- GitHub: [Your GitHub Link]
-- LinkedIn: [Your LinkedIn Link]
-- Email: [Your Email Address]
-
----
