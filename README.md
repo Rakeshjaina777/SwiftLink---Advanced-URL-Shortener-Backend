@@ -23,8 +23,6 @@ This project demonstrates expertise in **NestJS**, **Redis caching**, **MongoDB*
 - **NestJS** — Progressive Node.js Framework
 - **MongoDB** — Storage for short/long URLs
 - **Redis** — Caching layer for faster URL redirection
-- **RabbitMQ** — Asynchronous messaging for analytics service
-- **Kafka** — Real-time streaming for click analytics
 - **JWT Authentication** — User login, Admin login
 - **Role-Based Access Control (RBAC)** — Admin, User
 - **Rate Limiting** — Prevent abuse and ensure fair usage
@@ -32,7 +30,7 @@ This project demonstrates expertise in **NestJS**, **Redis caching**, **MongoDB*
 - **Docker-Ready Setup** — Easy deployment with Docker
 - **Custom Middleware** — Logging and validation
 - **Environment Configurations** — Secure environment management
-- **Unit & E2E Testing** — Ensuring code quality
+
 
 ---
 
